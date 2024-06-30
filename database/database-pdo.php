@@ -1,10 +1,9 @@
 <?php
-
-$servername = 'localhost';
-$username = 'root';
-$password = '';
-$dbname = 'login-project' ;
-global $conn ;
+//if your project is on localhost : servername:'host', username:'root', password:'' .
+$servername = 'server name';
+$username = 'your username';
+$password = 'your password';
+$dbname = 'name table' ;
 try{
     $conn = new PDO("mysql: host=$servername ;dbname=" . $dbname ,$username, $password);
     // ----------- set PDO errors -----------
