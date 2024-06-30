@@ -3,7 +3,7 @@
 $servername = 'server name';
 $username = 'your username';
 $password = 'your password';
-$dbname = 'name table' ;
+$dbname = 'database name;
 try{
     $conn = new PDO("mysql: host=$servername ;dbname=" . $dbname ,$username, $password);
     // ----------- set PDO errors -----------
