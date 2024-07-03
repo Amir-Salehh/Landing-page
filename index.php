@@ -33,6 +33,11 @@ require_once ('database/database-pdo.php');
           <input type="text" placeholder="Phone Number" name="phone">
         <input type="password" placeholder="Password" name="password">
         <button type="submit" name="signup">Sign Up</button>
+        <?php if($_GET['empty']){ ?>
+          <p style="width:100%" class="alert alert-danger" >Please fill in all fields.</p>
+        <?php }if($_GET['submit']){ ?>
+          <p style="width:100%" class="alert alert-success" >Welcome to our site.</p>
+        <?php } ?>
       </form>
     </div>
     <div class="form-container sign-in">
