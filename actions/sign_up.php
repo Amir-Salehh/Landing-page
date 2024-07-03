@@ -26,7 +26,7 @@ if(isset($_POST['signup'])){
             // exe
             $stmt->execute();
             echo "account created";
-            header("location:../index.php");
+            header("location:../index.php?submit=?");
         }
     }
     catch (PDOException $error){
