@@ -33,9 +33,9 @@ require_once ('database/database-pdo.php');
           <input type="text" placeholder="Phone Number" name="phone">
         <input type="password" placeholder="Password" name="password">
         <button type="submit" name="signup">Sign Up</button>
-        <?php if($_GET['empty']){ ?>
+        <?php if(isset($_GET['sign-up-empty'])){ ?>
           <p style="width:100%" class="alert alert-danger" >Please fill in all fields.</p>
-        <?php }if($_GET['submit']){ ?>
+        <?php }if(isset($_GET['submit'])){ ?>
           <p style="width:100%" class="alert alert-success" >Welcome to our site.</p>
         <?php } ?>
       </form>
@@ -54,7 +54,9 @@ require_once ('database/database-pdo.php');
         <input type="password" placeholder="Password" name="password">
         <a href="OTP/otp-email.php">Forget your Password?</a>
             <button type="submit" name="sign_in">SignIn</button>
-           <?php if(isset($_GET['notUser'])){ ?>
+           <?php if(isset($_GET['sign-in-empty'])){ ?>
+                <p style="width:100%" class="alert alert-danger" >Please fill in all fields.</p>
+           <?php } if(isset($_GET['notUser'])){ ?>
                 <p style="width:100%" class="alert alert-danger" >user not found.</p>
             <?php } elseif(isset($_GET['findUser'])){?>
                 <p style="width:100%" class="alert alert-success" >Login to website.</p>
