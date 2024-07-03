@@ -11,7 +11,7 @@ if(isset($_POST['signup'])){
         global $conn ;
         
         if($username == "" or $email == "" or $phone_number == "" or $password == ""){
-            header("location:../index.php?empty=ok") ;
+            header("location:../index.php?sign-up-empty=ok") ;
         }
         else{
             // sql
